@@ -1,0 +1,1 @@
+include ':app', ':nav', ':login', ':scrollingactivity', ':master_detail', ':setting_activity', ':tabactivity'

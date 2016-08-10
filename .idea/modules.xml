@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ToolsAssemble.iml" filepath="$PROJECT_DIR$/ToolsAssemble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/master_detail/master_detail.iml" filepath="$PROJECT_DIR$/master_detail/master_detail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nav/nav.iml" filepath="$PROJECT_DIR$/nav/nav.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollingactivity/scrollingactivity.iml" filepath="$PROJECT_DIR$/scrollingactivity/scrollingactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/setting_activity/setting_activity.iml" filepath="$PROJECT_DIR$/setting_activity/setting_activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabactivity/tabactivity.iml" filepath="$PROJECT_DIR$/tabactivity/tabactivity.iml" />
+    </modules>
+  </component>
+</project>
