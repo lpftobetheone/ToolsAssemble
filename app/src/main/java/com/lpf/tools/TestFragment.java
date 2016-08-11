@@ -3,6 +3,7 @@ package com.lpf.tools;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -109,7 +110,21 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
     @Override
     public void onRefresh() {
-
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeRefreshLayout.setRefreshing(false);
+                int temp = (int)(Math.random()*10);
+                if(flag != STAGGERED_GRID){
+                    mRecyclerViewAdapter.mDatas.add(0,"new Data"+temp);
+                    mRecyclerViewAdapter.notifyDataSetChanged();
+                }else{
+                    myStaggeredViewAdpater.mDatas.add(0,"new Data"+temp);
+                    myStaggeredViewAdpater.mHeights.add(0,(int)(Math.random()*200+300));
+                    myStaggeredViewAdpater.notifyDataSetChanged();
+                }
+            }
+        },1000);
     }
 
     @Override

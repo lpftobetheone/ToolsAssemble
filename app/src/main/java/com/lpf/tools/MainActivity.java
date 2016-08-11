@@ -6,18 +6,24 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.lpf.tools.adapter.MyViewPagerAdapter;
 import com.lpf.tools.base.BaseActivity;
 import com.lpf.tools.utils.SnackbarUtil;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +73,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     private void configViews() {
 
         setSupportActionBar(mToolBar);
+//        mToolBar.setOnMenuItemClickListener(onMenuItemClickListener);
 
         ActionBarDrawerToggle mActionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolBar, R.string.toggle_open, R.string.toggle_close);
         mActionBarDrawerToggle.syncState();
@@ -171,4 +178,36 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
             }
         });
     }
+
+
+//    Toobar菜单按钮
+//    mTooBar.setOnMeunItemClickListener()
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.drawer_navigation,menu);
+//        return true;
+//    }
+//
+//    private Toolbar.OnMenuItemClickListener onMenuItemClickListener = new Toolbar.OnMenuItemClickListener() {
+//        @Override
+//        public boolean onMenuItemClick(MenuItem item) {
+//            String msg = "";
+//            switch (item.getItemId()){
+//                case R.id.action_settings:
+//                    msg += "one";
+//                    break;
+//                case R.id.action_settings2:
+//                    msg += "two";
+//                    break;
+//                case R.id.action_settings3:
+//                    msg += "third";
+//                    break;
+//            }
+//            if(!TextUtils.isEmpty(msg)){
+//                SnackbarUtil.show(mViewPager,msg,0);
+//            }
+//            return true;
+//        }
+//    };
 }
