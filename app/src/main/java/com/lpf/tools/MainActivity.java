@@ -72,8 +72,8 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         mActionBarDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
 
-        mNavigationView.inflateHeaderView(R.layout.nav_header_drawer_navigation);
-        mNavigationView.inflateMenu(R.menu.drawer_navigation);
+//        mNavigationView.inflateHeaderView(R.layout.nav_header_drawer_navigation);
+//        mNavigationView.inflateMenu(R.menu.drawer_navigation);
 
         onNavgationViewMenuItemSelected(mNavigationView);
 

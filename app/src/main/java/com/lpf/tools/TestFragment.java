@@ -14,20 +14,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lpf.tools.adapter.MyRecyclerViewAdapter;
+import com.lpf.tools.adapter.MyStaggeredViewAdapter;
 import com.lpf.tools.base.BaseFragment;
+import com.lpf.tools.utils.SnackbarUtil;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, MyRecyclerViewAdapter.OnItemClickListener,MyStaggeredViewAdapter.OnItemClickListener{
 
     private View mView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-//    private MyRecyclerViewAdapter mRecyclerViewAdapter;
-//    private MyStaggeredViewAdpater myStaggeredViewAdpater;
+    private MyRecyclerViewAdapter mRecyclerViewAdapter;
+    private MyStaggeredViewAdapter myStaggeredViewAdpater;
 
     private static final int VERTICAL_LIST = 0;
     private static final int HORIZONTAL_LIST = 1;
@@ -58,6 +61,8 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        mContext = getActivity();
+
         mSwipeRefreshLayout = (SwipeRefreshLayout) mView.findViewById(R.id.id_swiperefreshlayout);
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.id_recyclerview);
 
@@ -67,7 +72,6 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         mSwipeRefreshLayout.setColorSchemeResources(R.color.main_blue_light, R.color.main_blue_dark);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
-        mContext = getActivity();
     }
 
     private void configRecyclerView() {
@@ -89,6 +93,16 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
                 break;
         }
 
+        if(flag != STAGGERED_GRID){
+            mRecyclerViewAdapter = new MyRecyclerViewAdapter(mContext);
+            mRecyclerViewAdapter.setOnItemClickListener(this);
+            mRecyclerView.setAdapter(mRecyclerViewAdapter);
+        }else{
+            myStaggeredViewAdpater = new MyStaggeredViewAdapter(mContext);
+            myStaggeredViewAdpater.setOnItemClickListener(this);
+            mRecyclerView.setAdapter(myStaggeredViewAdpater);
+        }
+
         mRecyclerView.setLayoutManager(mLayoutManager);
 
     }
@@ -96,5 +110,15 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     @Override
     public void onRefresh() {
 
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        SnackbarUtil.show(mRecyclerView,"单击"+position,0);
+    }
+
+    @Override
+    public void onItemLongClick(View view, int position) {
+        SnackbarUtil.show(mRecyclerView,"双击"+position,0);
     }
 }
