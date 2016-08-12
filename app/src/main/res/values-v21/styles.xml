@@ -6,4 +6,12 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <!--设置白天和晚上主题样式 start-->
+    <style name="Theme.DayNight" parent="Base.Theme.DayNight">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!--设置白天和晚上主题样式 end-->
 </resources>

@@ -2,6 +2,7 @@ package com.lpf.tools;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import com.lpf.tools.adapter.MyRecyclerViewAdapter;
 import com.lpf.tools.adapter.MyStaggeredViewAdapter;
 import com.lpf.tools.base.BaseFragment;
+import com.lpf.tools.ui.activity.ItemDetailActivity;
 import com.lpf.tools.utils.SnackbarUtil;
 
 
@@ -130,6 +132,9 @@ public class TestFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     @Override
     public void onItemClick(View view, int position) {
         SnackbarUtil.show(mRecyclerView,"单击"+position,0);
+
+        Intent intent = new Intent(mContext, ItemDetailActivity.class);
+        startActivity(intent);
     }
 
     @Override

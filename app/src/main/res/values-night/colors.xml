@@ -21,7 +21,7 @@
     <color name="textredcolor">#f31216</color>
     <color name="activitybg">#f3f3f3</color>
 
-    <color name="white">#FFFFFF</color>
+    <color name="white">#000000</color>
     <!-- 白色 -->
     <color name="ivory">#FFFFF0</color>
     <!-- 象牙色 -->
@@ -317,9 +317,8 @@
     <color name="dark_gray">#202020</color>
 
 
-
     <!--用来演示主题样式切换 白天和黑夜 字体颜色变化-->
-    <color name="cardview_titlecolor">#FFFFFF</color>
+    <color name="cardview_titlecolor">#000000</color>
 
 
 </resources>
