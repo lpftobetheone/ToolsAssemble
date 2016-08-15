@@ -22,6 +22,7 @@ import android.view.View;
 import com.lpf.tools.adapter.MyViewPagerAdapter;
 import com.lpf.tools.base.BaseActivity;
 import com.lpf.tools.utils.SnackbarUtil;
+import com.lpf.tools.views.animation.DepthPageTransformer;
 
 import org.w3c.dom.Text;
 
@@ -88,6 +89,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
         mViewPager.setAdapter(mViewPagerAdapter);
         mViewPager.setOffscreenPageLimit(5);
         mViewPager.addOnPageChangeListener(this);
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());  //设置ViewPager页面切换动画效果
 
         mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         mTabLayout.setupWithViewPager(mViewPager);
