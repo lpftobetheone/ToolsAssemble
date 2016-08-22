@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义圆形-->
+    <declare-styleable name="CustomCircleView">
+        <attr name="border_color" format="color"/>
+        <attr name="border_width" format="dimension"/>
+    </declare-styleable>
+
+</resources>
