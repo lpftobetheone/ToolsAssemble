@@ -9,6 +9,9 @@ import com.lpf.tools.db.entity.TestUser;
 
 import java.util.List;
 
+/**
+ * GreenDao数据库操作
+ */
 public class TestDBActivity extends AppCompatActivity {
 
     @Override

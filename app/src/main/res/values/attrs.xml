@@ -7,4 +7,11 @@
         <attr name="border_width" format="dimension"/>
     </declare-styleable>
 
+    <!--闪烁文字的颜色-->
+    <declare-styleable name="TwinkleTextView">
+        <attr name="start_color" format="color"/>
+        <attr name="middle_color" format="color"/>
+        <attr name="end_color" format="color"/>
+    </declare-styleable>
+
 </resources>

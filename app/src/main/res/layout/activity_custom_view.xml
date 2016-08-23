@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context="com.lpf.tools.CustomViewActivity">
 
+    <com.lpf.tools.views.TwinkleTextView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:text="Hello,闪烁文字"
+        custom:end_color="#0000FF"
+        custom:middle_color="#000000"
+        custom:start_color="#00CCFF" />
 
     <FrameLayout
         android:layout_width="match_parent"

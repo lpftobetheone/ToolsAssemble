@@ -108,8 +108,8 @@ public class CustomCircleView extends View {
             end_x+=mBounds.centerX();
             start_y+=mBounds.centerY();
             end_y+=mBounds.centerY();
-            System.out.println("centerX:"+mBounds.centerX()+"centerY:"+mBounds.centerY());
-            System.out.println("startX:"+start_x+"start_y:"+start_y+"end_x:"+end_x+"end_y:"+end_y);
+//            System.out.println("centerX:"+mBounds.centerX()+"centerY:"+mBounds.centerY());
+//            System.out.println("startX:"+start_x+"start_y:"+start_y+"end_x:"+end_x+"end_y:"+end_y);
             canvas.drawLine(start_x, start_y, end_x, end_y, mPaint);
         }
 

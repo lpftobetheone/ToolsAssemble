@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 /**
  * Created by lpf on 16/8/11.
+ * 圆角图片
  */
 public class RoundedImageView extends ImageView{
 
