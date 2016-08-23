@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DayNight">
         <activity
-            android:name=".CustomViewActivity"
+            android:name=".TestDBActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,8 @@
         <!-- <activity android:name=".ui.activity.CollpasedTopActivity"></activity> -->
         <activity android:name=".ui.activity.ItemDetailActivity" />
         <!-- <activity android:name=".ui.activity.CardFlipActivity"></activity> -->
-        <!--<activity android:name=".CustomViewActivity"></activity>-->
+        <!-- <activity android:name=".CustomViewActivity"></activity> -->
+        <!--<activity android:name=".TestDBActivity"></activity>-->
     </application>
 
 </manifest>
