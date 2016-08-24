@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader;
-import android.media.AudioManager;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -24,6 +23,9 @@ public class VolumeView extends View{
     private int offset = 8;
     private double mRandom;
     private LinearGradient mLinearGradient;
+
+    private int maxVolume;
+    private int currentVolume;
 
     public VolumeView(Context context) {
         this(context,null);
@@ -61,7 +63,9 @@ public class VolumeView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         for (int i = 0; i < mRectCount; i++) {
-            mRandom = Math.random();
+//            mRandom = Math.random();
+            mRandom = (float)currentVolume/maxVolume;
+//            float currentHeight = (float)(mRectHeight*mRandom);
             float currentHeight = (float)(mRectHeight*mRandom);
             canvas.drawRect(
                     (float) (mWidth * 0.1 + mRectWidth * i + offset),
@@ -75,8 +79,4 @@ public class VolumeView extends View{
         postInvalidateDelayed(500);
     }
 
-    private onVolumeListener onVolumeListener;
-    public interface onVolumeListener{
-        int setVolume();
-    }
 }
