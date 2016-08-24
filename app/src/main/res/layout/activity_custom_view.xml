@@ -7,6 +7,10 @@
     android:orientation="vertical"
     tools:context="com.lpf.tools.CustomViewActivity">
 
+    <com.lpf.tools.views.VolumeView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
     <com.lpf.tools.views.TwinkleTextView
         android:layout_width="300dp"
         android:layout_height="200dp"
