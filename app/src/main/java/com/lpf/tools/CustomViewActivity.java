@@ -11,7 +11,7 @@ import com.lpf.tools.views.VolumeView;
 public class CustomViewActivity extends AppCompatActivity {
 
     private VolumeView mVolumeView;
-    private int max;
+
     AudioManager audioManager;
 
     @Override
@@ -19,4 +19,6 @@ public class CustomViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view);
     }
+
+
 }
